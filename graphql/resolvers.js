@@ -1,15 +1,13 @@
-import { people, getById, addPerson } from './db'
+import peopleQuery from './Query/people'
+import peopleMutation from './Mutation/people'
 
 const resolvers = {
   Query: {
-    people: () => people,
-    person: (_, { id }) => {
-      return getById(id)
-    }
+    ...peopleQuery
   },
   Mutation: {
-    create: (_, { name, age, gender }) => addPerson(name, age, gender)
+    ...peopleMutation
   }
-}
+};
 
 export default resolvers

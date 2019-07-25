@@ -1,4 +1,4 @@
-export let people = [
+export let People = [
   {
     id: '0',
     name: 'Nicolas',
@@ -44,24 +44,24 @@ export let people = [
 ]
 
 export const getById = id => {
-  const filteredPeople = people.filter(person => person.id === String(id))
+  const filteredPeople = People.filter(person => person.id === String(id))
   return filteredPeople[0]
 }
 
 export const addPerson = (name, age, gender) => {
   const newPerson = {
-    id: `${people.length + 1}`,
+    id: `${People.length + 1}`,
     name,
     age,
     gender
   }
-  people.push(newPerson)
+  People.push(newPerson)
   return newPerson
 }
 
 export const deletePerson = id => {
-  const cleanPerson = people.filter(person => person.id !== String(id))
-  if (people.length > cleanPerson.length) {
+  const cleanPerson = People.filter(person => person.id !== String(id))
+  if (People.length > cleanPerson.length) {
     people = cleanPerson
     return true
   } else {
