@@ -1,0 +1,22 @@
+{
+  "name": "firstGraphQL",
+  "version": "1.0.0",
+  "description": "firstGraphQL",
+  "main": "index.js",
+  "repository": "https://github.com/amiru11/firstGraphQL",
+  "author": "saem",
+  "license": "MIT",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "esm": "^3.2.25",
+    "global": "^4.4.0",
+    "graphql-yoga": "^1.18.1"
+  },
+  "scripts": {
+    "start": "nodemon -r esm index.js"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1"
+  }
+}
