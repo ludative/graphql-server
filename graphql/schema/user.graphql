@@ -1,0 +1,26 @@
+type User {
+    id: Int!
+    username: String!
+    nickname: String
+    isAdmin: Boolean!
+    deleted: Boolean!
+    createdAt: String
+}
+
+input CreateUserInput {
+    username: String!
+    password: String!
+    nickname: String
+}
+
+input UpdateUserInput {
+    username: String!
+    nickname: String
+    deleted: Boolean
+    isAdmin: Boolean
+}
+
+type GetUsers implements Pagination {
+    count: Int
+    rows: [User]
+}

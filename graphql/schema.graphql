@@ -1,14 +1,17 @@
-type Person {
-  id: Int!
-  username: String!
-}
+# import User from "./schema/user.graphql"
+
+# TODO scalr date type 추가
+# TODO notEmptyString type 추가
 
 type Query {
-  people: [Person]!
-  person(id: Int!): Person
+  getUsers: GetUsers
+  getUserById(id: Int!): User
 }
 
 type Mutation {
-  # change State
-  create(username: String!): Person!
+  createUser(params: CreateUserInput): User!
+}
+
+interface Pagination {
+  count: Int
 }

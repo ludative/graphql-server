@@ -1,21 +1,17 @@
 import models from '../models'
 
-const people = async () => {
-  const users = await models.User.findAll()
+const getUsers = async () => {
+  const users = await models.User.findAndCountAll()
   return users
 }
-const person = (_, { id }) => {
-  return getById(id)
-}
-
-const getById = async id => {
+const getUserById =  async (_, { id }) => {
   const user = await models.User.findByPk(id)
   return user
 }
 
 const peopleQuery = {
-  people,
-  person
+  getUsers,
+  getUserById
 }
 
 export default peopleQuery

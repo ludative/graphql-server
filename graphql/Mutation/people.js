@@ -1,13 +1,17 @@
+import bcrypt from 'bcrypt-nodejs'
 import models from '../models'
 
-const create = (_, { name, age, gender }) => addPerson(name, age, gender)
+const createUser = async (_, {params}) => {
+  const user = await models.User.create({
+    ...params,
+    password: bcrypt.hashSync(params.password)
+  });
 
-// const addPerson = async () => {
-//     const user = await models.User.create
-// }
+  return user
+}
 
 const peopleMutation = {
-  create
+  createUser
 }
 
 export default peopleMutation
