@@ -4,10 +4,10 @@ import peopleMutation from './Mutation/people'
 const resolvers = {
   Query: {
     ...peopleQuery
-  },
-  Mutation: {
-    ...peopleMutation
   }
-};
+  // Mutation: {
+  //   ...peopleMutation
+  // }
+}
 
 export default resolvers

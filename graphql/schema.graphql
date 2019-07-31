@@ -1,8 +1,6 @@
 type Person {
   id: Int!
-  name: String!
-  age: Int!
-  gender: String!
+  username: String!
 }
 
 type Query {
@@ -12,5 +10,5 @@ type Query {
 
 type Mutation {
   # change State
-  create(name: String!, age: Int!, gender: String!): Person!
+  create(username: String!): Person!
 }
