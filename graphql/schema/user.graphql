@@ -24,3 +24,7 @@ type GetUsers implements Pagination {
     count: Int
     rows: [User]
 }
+
+type UserMutationTest {
+    value: String!
+}

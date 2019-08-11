@@ -18,7 +18,7 @@
     "sequelize": "^5.12.1"
   },
   "scripts": {
-    "start": "nodemon -r esm index.js"
+    "start": "nodemon -r esm --inspect index.js"
   },
   "devDependencies": {
     "babel-preset-env": "^1.7.0",

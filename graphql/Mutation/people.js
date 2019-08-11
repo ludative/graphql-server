@@ -8,10 +8,16 @@ const createUser = async (_, {params}) => {
   });
 
   return user
-}
+};
+
+const userMutationTest = (_, { value }) => {
+  console.log(value);
+  return {value}
+};
 
 const peopleMutation = {
-  createUser
-}
+  createUser,
+  userMutationTest
+};
 
 export default peopleMutation
