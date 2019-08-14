@@ -6,12 +6,12 @@
 type Query {
   getUsers: GetUsers
   getUserById(id: Int!): User
-  deleteUserById(id: Int!): User
 }
 
 type Mutation {
   createUser(params: CreateUserInput): User!
   userMutationTest(value: String!): UserMutationTest
+  deleteUserById(id: Int!): User
 }
 
 interface Pagination {

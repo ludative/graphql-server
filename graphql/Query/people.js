@@ -10,19 +10,9 @@ const getUserById = async (_, { id }) => {
   return user;
 };
 
-const deleteUserById = async (_, { id }) => {
-  const user = await models.User.findByPk(id);
-  user.update({
-    deleted: true
-  });
-
-  return user;
-};
-
 const peopleQuery = {
   getUsers,
-  getUserById,
-  deleteUserById
+  getUserById
 };
 
 export default peopleQuery;

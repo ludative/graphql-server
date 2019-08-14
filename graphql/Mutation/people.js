@@ -15,9 +15,19 @@ const userMutationTest = (_, { value }) => {
   return { value };
 };
 
+const deleteUserById = async (_, { id }) => {
+  const user = await models.User.findByPk(id);
+  await user.update({
+    deleted: true
+  });
+
+  return user;
+};
+
 const peopleMutation = {
   createUser,
-  userMutationTest
+  userMutationTest,
+  deleteUserById
 };
 
 export default peopleMutation;
