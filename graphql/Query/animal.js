@@ -1,7 +1,9 @@
 import models from "../models";
 
 const getAnimals = async () => {
-  const animals = await models.Animal.findAndCountAll();
+  const animals = await models.Animal.findAndCountAll({
+    order: [["createdAt", "DESC"]]
+  });
   return animals;
 };
 

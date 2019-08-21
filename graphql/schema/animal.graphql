@@ -1,6 +1,7 @@
 type Animal {
   id: Int!
   name: String!
+  createdAt: String
 }
 
 type GetAnimals implements Pagination {
