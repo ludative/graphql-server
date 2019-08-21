@@ -1,4 +1,13 @@
+type Pet {
+  id: Int!
+  name: String!
+}
+
 type GetPets implements Pagination {
   count: Int
   rows: [Pet]
+}
+
+input CreatePetInput {
+  name: String!
 }
