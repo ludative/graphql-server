@@ -1,5 +1,5 @@
 # import User from "./schema/user.graphql"
-# import Pet from './schema/pet.graphql'
+# import Animal from './schema/animal.graphql'
 
 # TODO scalr date type 추가
 # TODO notEmptyString type 추가
@@ -7,14 +7,14 @@
 type Query {
   getUsers: GetUsers
   getUserById(id: Int!): User
-  getPets: GetPets
+  getAnimals: GetAnimals
 }
 
 type Mutation {
   createUser(params: CreateUserInput): User!
   userMutationTest(value: String!): UserMutationTest
   deleteUserById(id: Int!): User
-  createPet(params: CreatePetInput): Pet!
+  createAnimal(params: CreateAnimalInput): Animal!
 }
 
 interface Pagination {

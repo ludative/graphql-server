@@ -4,19 +4,19 @@
 import peopleQuery from "./Query/people";
 import peopleMutation from "./Mutation/people";
 /**
- * Pet
+ * Animal
  */
-import petQuery from "./Query/pet";
-import petMutation from "./Mutation/pet";
+import animalQuery from "./Query/animal";
+import animalMutation from "./Mutation/animal";
 
 const resolvers = {
   Query: {
     ...peopleQuery,
-    ...petQuery
+    ...animalQuery
   },
   Mutation: {
     ...peopleMutation,
-    ...petMutation
+    ...animalMutation
   }
 };
 

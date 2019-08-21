@@ -1,0 +1,13 @@
+type Animal {
+  id: Int!
+  name: String!
+}
+
+type GetAnimals implements Pagination {
+  count: Int
+  rows: [Animal]
+}
+
+input CreateAnimalInput {
+  name: String!
+}
