@@ -1,0 +1,4 @@
+type GetPets implements Pagination {
+  count: Int
+  rows: [Pet]
+}

@@ -1,13 +1,23 @@
-import peopleQuery from './Query/people'
-import peopleMutation from './Mutation/people'
+/**
+ * People
+ */
+import peopleQuery from "./Query/people";
+import peopleMutation from "./Mutation/people";
+/**
+ * Pet
+ */
+import petQuery from "./Query/pet";
+import petMutation from "./Mutation/pet";
 
 const resolvers = {
   Query: {
-    ...peopleQuery
+    ...peopleQuery,
+    ...petQuery
   },
   Mutation: {
-    ...peopleMutation
+    ...peopleMutation,
+    ...petMutation
   }
-}
+};
 
-export default resolvers
+export default resolvers;

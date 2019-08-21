@@ -6,6 +6,7 @@
 type Query {
   getUsers: GetUsers
   getUserById(id: Int!): User
+  getPets: GetPets
 }
 
 type Mutation {
