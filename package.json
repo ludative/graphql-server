@@ -15,7 +15,7 @@
     "graphql-yoga": "^1.18.1",
     "mysql2": "^1.6.5",
     "nodemon": "^1.19.1",
-    "sequelize": "^5.12.1"
+    "sequelize": "^5.15.1"
   },
   "scripts": {
     "start": "nodemon -r esm --inspect index.js"
